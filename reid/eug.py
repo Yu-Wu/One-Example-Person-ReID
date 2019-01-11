@@ -120,12 +120,13 @@ class EUG():
 
         # change the learning rate by step
         def adjust_lr(epoch, step_size):
-            use_unselcted_data = True
+            
+            = True
             lr = init_lr / (10 ** (epoch // step_size))
             for g in optimizer.param_groups:
                 g['lr'] = lr * g.get('lr_mult', 1)
             if epoch >= step_size:
-                use_unselected = False
+                use_unselcted_data = False
                 # print("Epoch {}, CE loss, current lr {}".format(epoch, lr))
             return use_unselcted_data
 
