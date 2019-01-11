@@ -6,7 +6,6 @@ from torch import nn
 from torch.autograd import Variable
 
 from .evaluation_metrics import accuracy
-from .loss import ExLoss
 from .utils.meters import AverageMeter
 
 

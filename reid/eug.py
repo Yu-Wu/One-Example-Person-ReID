@@ -14,7 +14,7 @@ from torch.utils.data import DataLoader
 from reid.utils.data.preprocessor import Preprocessor
 import random
 
-from reid.loss import ExLoss
+from reid.exclusive_loss import ExLoss
 
 
 class EUG():
@@ -121,7 +121,7 @@ class EUG():
         # change the learning rate by step
         def adjust_lr(epoch, step_size):
             
-            = True
+            use_unselcted_data = True
             lr = init_lr / (10 ** (epoch // step_size))
             for g in optimizer.param_groups:
                 g['lr'] = lr * g.get('lr_mult', 1)

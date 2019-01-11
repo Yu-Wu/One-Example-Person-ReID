@@ -35,4 +35,4 @@ class ExLoss(nn.Module):
     def forward(self, inputs, targets):
         outputs = Exclusive(self.V)(inputs, targets) * self.t
         loss = F.cross_entropy(outputs, targets, weight=self.weight_mask)
-        return loss, inputs
+        return loss, outputs
