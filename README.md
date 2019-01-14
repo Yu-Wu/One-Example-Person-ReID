@@ -1,4 +1,4 @@
-# [Progressive Learning for Person Re-Identification with One Example](https://yu-wu.net/pdf/TIP2019_One-Example-reID.pdf)
+# [Progressive Learning for Person Re-Identification with One Example](https://ieeexplore.ieee.org/document/8607049)
 
 Pytorch implementation for our paper [[Link]](https://yu-wu.net/pdf/TIP2019_One-Example-reID.pdf).
 This code is based on the [Open-ReID](https://github.com/Cysu/open-reid) library and [Exploit-Unknown-Gradually](https://github.com/Yu-Wu/Exploit-Unknown-Gradually).
