@@ -78,7 +78,9 @@ def main(args):
             continue
     
         ratio =  (step+1) * args.EF / 100
-        nums_to_select = min(int(len(u_data) * ratio),  len(u_data))
+        nums_to_select = int(len(u_data) * ratio)
+        if nums_to_select >= len(u_data):
+                break
 
         print("Runing: EF={}%, step {}:\t Nums_to_be_select {} \t Ritio \t Logs-dir {}".format(
                 args.EF, step,  nums_to_select, ratio, save_path))
