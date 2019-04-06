@@ -32,7 +32,7 @@ The performances varies according to random splits for initial labeled data. To 
 
 ## Citation
 
-Please cite the following paper in your publications if it helps your research:
+Please cite the following papers in your publications if it helps your research:
 
     @article{wu2019progressive,
       title  = {Progressive Learning for Person Re-Identification with One Example},
@@ -40,6 +40,13 @@ Please cite the following paper in your publications if it helps your research:
       journal= {IEEE Transactions on Image Processing (TIP)},
       year   = {2019}, 
       doi    = {10.1109/TIP.2019.2891895}
+    }
+    
+    @inproceedings{wu2018cvpr_oneshot,
+        title = {Exploit the Unknown Gradually: One-Shot Video-Based Person Re-Identification by Stepwise Learning},
+        author = {Wu, Yu and Lin, Yutian and Dong, Xuanyi and Yan, Yan and Ouyang, Wanli and Yang, Yi},
+        booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+        year = {2018}
     }
 
     
