@@ -46,12 +46,21 @@ class Mars(Dataset):
         identities = [[{} for _ in range(6)] for _ in range(1635)]
 
         def register(subdir):
+            print("Copy images for {}".format(subdir))
             pids = set()
             vids = []
             person_list = os.listdir(os.path.join(self.root, subdir)); person_list.sort()
             for person_id in person_list:
                 count = 0
                 videos = os.listdir(os.path.join(self.root, subdir, person_id)); videos.sort()
+
+                pid = int(person_id)
+                assert 0 <= pid <= 1634  # pid == 999, 1000 means background and distractors
+                if pid == 999:
+                    print("skip junk images")
+                    continue
+                pids.add(pid)
+                
                 for video_id in videos:
                     video_path = os.path.join(self.root, subdir, person_id, video_id)
                     video_id = int(video_id) - 1
@@ -59,17 +68,14 @@ class Mars(Dataset):
                     frame_list = []
                     for fname in fnames:
                         count += 1
-                        pid = int(person_id)
                         cam = int(fname[5]) - 1
-                        assert 0 <= pid <= 1634  # pid == 999, 1000 means background and distractors
                         assert 0 <= cam <= 5
-                        pids.add(pid)
                         newname = ('{:04d}_{:02d}_{:04d}_{:04d}.jpg'.format(pid, cam, video_id, len(frame_list)))
                         frame_list.append(newname)
                         shutil.copy(osp.join(video_path, fname), osp.join(images_dir, newname))
                     identities[pid][cam][video_id] = frame_list
                     vids.append(frame_list)
-                print("ID {}, frames {}\t  in {}".format(person_id, count, subdir))
+                #print("ID {}, frames {}\t  in {}".format(person_id, count, subdir))
             return pids, vids
 
         print("begin to preprocess mars dataset")
