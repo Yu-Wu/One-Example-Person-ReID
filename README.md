@@ -37,9 +37,14 @@ Please cite the following papers in your publications if it helps your research:
     @article{wu2019progressive,
       title  = {Progressive Learning for Person Re-Identification with One Example},
       author = {Wu, Yu and Lin, Yutian and Dong, Xuanyi and Yan, Yan and Bian, Wei and Yang, Yi},
-      journal= {IEEE Transactions on Image Processing (TIP)},
+      journal= {IEEE Transactions on Image Processing},
       year   = {2019}, 
-      doi    = {10.1109/TIP.2019.2891895}
+      volume = {28}, 
+      number = {6}, 
+      pages  = {2872-2881}, 
+      doi    = {10.1109/TIP.2019.2891895}, 
+      ISSN   = {1057-7149}, 
+      month  = {June},
     }
     
     @inproceedings{wu2018cvpr_oneshot,
