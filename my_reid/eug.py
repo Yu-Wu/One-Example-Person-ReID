@@ -1,20 +1,20 @@
 import torch
 from torch import nn
-from reid import models
-from reid.trainers import Trainer
-from reid.evaluators import extract_features, Evaluator
-from reid.dist_metric import DistanceMetric
+from . import models
+from .trainers import Trainer
+from .evaluators import extract_features, Evaluator
+from .dist_metric import DistanceMetric
 import numpy as np
 from collections import OrderedDict
 import os.path as osp
 import pickle
-from reid.utils.serialization import load_checkpoint
-from reid.utils.data import transforms as T
+from .utils.serialization import load_checkpoint
+from .utils.data import transforms as T
 from torch.utils.data import DataLoader
-from reid.utils.data.preprocessor import Preprocessor
+from .utils.data.preprocessor import Preprocessor
 import random
 
-from reid.exclusive_loss import ExLoss
+from .exclusive_loss import ExLoss
 
 
 class EUG():

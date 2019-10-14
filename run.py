@@ -1,17 +1,16 @@
-from __future__ import print_function, absolute_import
-from reid.eug import *
-from reid import datasets
-from reid import models
+from my_reid.eug import *
+from my_reid import datasets
+from my_reid import models
 import numpy as np
 import torch
 import argparse
 import os
 
-from reid.utils.logging import Logger
+from my_reid.utils.logging import Logger
 import os.path as osp
 import sys
 from torch.backends import cudnn
-from reid.utils.serialization import load_checkpoint
+from my_reid.utils.serialization import load_checkpoint
 from torch import nn
 import time
 import pickle
